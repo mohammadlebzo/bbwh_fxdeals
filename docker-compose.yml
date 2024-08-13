@@ -1,28 +1,3 @@
-# services:
-#   mysql-srv:
-#     image: mysql:latest
-#     container_name: mysql-db
-#     ports:
-#       - "3307:3306"
-#     environment:
-#       MYSQL_ALLOW_EMPTY_PASSWORD: true
-#       MYSQL_DATABASE: deals
-#       MYSQL_USER: raven
-#       MYSQL_PASSWORD: raven
-
-#   fxdeals:
-#     build:
-#       context: .
-#       dockerfile: Dockerfile
-#     ports:
-#       - "8080:8080"
-#     depends_on:
-#       - mysql-srv
-#     environment:
-#       SPRING_DATASOURCE_URL: jdbc:mysql://0.0.0.0:3306/deals
-#       SPRING_DATASOURCE_USERNAME: raven
-#       SPRING_DATASOURCE_PASSWORD: raven
-
 services:
   fxdeals:
     build:
